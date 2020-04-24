@@ -18,6 +18,8 @@ class UI {
     this.timezone.textContent = `Timezone: ${weather.timezone}`;
     this.feelsLike.innerHTML = `Feels Like: ${weather.app_temp} &#8451;`;
     this.precipitation.textContent = `Precipitation: ${weather.precip}`;
-    this.wind.textContent = `Wind Speed: ${weather.wind_spd} mph`;
+    this.wind.textContent = `Wind: ${
+      weather.wind_spd
+    } mph ${weather.wind_cdir_full.toUpperCase()}`;
   }
 }
