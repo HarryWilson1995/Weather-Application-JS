@@ -1,7 +1,24 @@
-fetch(https://www.weatherbit.io/api)
+class Weather {
+  constructor(city, state) {
+    this.apiKey = "47f305e987b04dc5888192c9d95f22d9";
+    this.city = city;
+    this.state = state;
+  }
 
-https://www.weatherbit.io/api/weather-current
+  // Fetch Weather from API
+  async getWeather() {
+    const response = await fetch(
+      `https://api.weatherbit.io/v2.0/current?city=${this.city},${this.state}&key=${this.apiKey}`
+    );
 
-my_key = 47f305e987b04dc5888192c9d95f22d9 
+    const responseData = await response.json();
 
-example_request = https://api.weatherbit.io/v2.0/current?city=Raleigh,NC&key=API_KEY 
+    return responseData;
+  }
+
+  // Change weather location
+  changeLocation(city, state) {
+    this.city = city;
+    this.state = state;
+  }
+}
