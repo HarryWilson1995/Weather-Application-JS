@@ -1,0 +1,1 @@
+fetch(https://www.weatherbit.io/api)
