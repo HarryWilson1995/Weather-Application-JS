@@ -13,11 +13,11 @@ class UI {
   paint(weather) {
     this.location.textContent = `${weather.city_name}, ${weather.state_code}, ${weather.country_code}`;
     this.desc.textContent = weather.weather.description;
-    this.string.textContent = `${weather.temp} Degrees Celcius`;
+    this.string.innerHTML = `${weather.temp} &#8451;`;
     // this.icon.setAttribute("src", weather.weather.icon);
     this.timezone.textContent = `Timezone: ${weather.timezone}`;
-    this.feelsLike.textContent = `Feels Like: ${weather.app_temp} Degrees Celcius`;
+    this.feelsLike.innerHTML = `Feels Like: ${weather.app_temp} &#8451;`;
     this.precipitation.textContent = `Precipitation: ${weather.precip}`;
-    this.wind.textContent = `Wind Speed: ${weather.wind_spd}`;
+    this.wind.textContent = `Wind Speed: ${weather.wind_spd} mph`;
   }
 }

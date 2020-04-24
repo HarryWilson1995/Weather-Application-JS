@@ -1,5 +1,5 @@
 // Initialise weather class
-const weather = new Weather("Denby Dale", "");
+const weather = new Weather("Thomaston", "CT");
 
 // Initialise ui class
 const ui = new UI();
