@@ -8,7 +8,7 @@ class Weather {
   // Fetch Weather from API
   async getWeather() {
     const response = await fetch(
-      `https://api.weatherbit.io/v2.0/current?city=${this.city},${this.state}&key=${this.apiKey}`
+      `https://api.weatherbit.io/v2.0/current?city=${this.city},${this.state}&key=${this.apiKey}&units=I`
     );
 
     const responseData = await response.json();

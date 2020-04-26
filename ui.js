@@ -11,12 +11,12 @@ class UI {
     this.wind = document.getElementById("w-wind");
   }
   paint(weather) {
-    this.location.textContent = `${weather.city_name}, ${weather.state_code}, ${weather.country_code}`;
+    this.location.textContent = `${weather.city_name}, ${weather.state_code}`;
     this.desc.textContent = weather.weather.description;
-    this.string.innerHTML = `${weather.temp} &#8451;`;
+    this.string.innerHTML = `${weather.temp} &#8457;`;
     // this.icon.setAttribute("src", weather.weather.icon);
     this.timezone.textContent = `Timezone: ${weather.timezone}`;
-    this.feelsLike.innerHTML = `Feels Like: ${weather.app_temp} &#8451;`;
+    this.feelsLike.innerHTML = `Feels Like: ${weather.app_temp} &#8457;`;
     this.precipitation.textContent = `Precipitation: ${weather.precip}`;
     this.wind.textContent = `Wind: ${
       weather.wind_spd
