@@ -2,7 +2,7 @@ class Storage {
   constructor() {
     this.city;
     this.state;
-    this.defaultCity = "Miami";
+    this.defaultCity = "Tampa";
     this.defaultState = "FL";
   }
 
